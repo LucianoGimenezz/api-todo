@@ -51,4 +51,8 @@ Con el fin de aprender los conceptos básicos del framework de python.
     ```shell
     pip3 install -r requirements.txt
     ```
-   
+
+## Detalles
+- Para crear el entorno virtual se puede utilizar la herramienta que prefiera, por ejemplo: [virtualenv](https://virtualenv.pypa.io/en/latest/), [pipenv](https://pipenv-es.readthedocs.io/es/latest/), [poetry](https://python-poetry.org/), etc.(En este caso se utilizó el módulo venv de python)
+
+- Los requerimientos se deben instalar despues de activar el entorno virtual.

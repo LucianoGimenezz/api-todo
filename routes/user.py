@@ -37,7 +37,6 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 @user_route.post("/logIn", response_model=Token)
 def authenticate_user(user: UserLogin, db: Session = Depends(get_db)):
     user_response =  crud.login_user(db=db, user=user)
-    print(os.environ.get('SECRET'))
     payload = {"sub": user_response.id, "username": user_response.username, "exp": datetime.utcnow() + timedelta(weeks=2)}
     access_token = jwt.encode(payload, os.environ.get('SECRET'), algorithm=algorithm)
     return {"access_token": access_token, "token_type": "Bearer"}
